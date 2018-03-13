@@ -1,0 +1,12 @@
+pipeline:
+
+  build:
+    image: golang
+    commands:
+      - go build 
+      - go test
+
+  docker:
+    image: plugins/docker
+    tags: "${DRONE_COMMIT_SHA:0:8}"
+
