@@ -8,5 +8,6 @@ pipeline:
 
   docker:
     image: plugins/docker
+    repo:  codekube/drone-with-go
     tags: "${DRONE_COMMIT_SHA:0:8}"
 
